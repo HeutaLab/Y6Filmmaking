@@ -1,0 +1,17 @@
+{
+  // The Film Studio (Year 6 filmmaking pack), served at y6filmmaking.heutalab.com
+  // by its own Worker. Kept separate from the main heutalab.com Worker so a
+  // classroom page can be redeployed mid-unit without touching the site.
+  // Cloudflare creates the DNS record and certificate for the custom domain itself.
+  //
+  // Usage: npx wrangler deploy   (npx wrangler login once, if needed)
+  "name": "y6filmmaking",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "none"
+  },
+  "routes": [
+    { "pattern": "y6filmmaking.heutalab.com", "custom_domain": true }
+  ]
+}
